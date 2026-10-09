@@ -59,6 +59,9 @@ Rules:
   frameworks according to the supplied context. If the document
   does not clearly identify a technology as a framework, do not
   assume its category.
+- Keep answers concise. For a simple factual question,
+  answer in 1-3 sentences or a short list.
+- Do not repeat citations or explain the answer unless needed.
 
 Document excerpts:
 {context}
@@ -79,10 +82,12 @@ Answer:
             ],
             options={
                 "temperature": 0,
-                "num_predict": 120
+                "num_predict": 250 # token limit
             },
+            think=False, # stop think, if enable need increase/drop limit num_predict
         )
 
+        print(response)
         print("Prompt eval:", response.get("prompt_eval_duration", 0) / 1e9, "s")
         print("Generation eval:", response.get("eval_duration", 0) / 1e9, "s")
         print("Generated tokens:", response.get("eval_count", 0))
