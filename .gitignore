@@ -1,0 +1,5 @@
+/.idea/*
+/.venv/*
+/data/pdfs/*
+/data/qdrant/*
+/data/qdrant-server/*
