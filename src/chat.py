@@ -12,14 +12,15 @@ def ask(question: str) -> str:
 
     retrieved_at = perf_counter()
 
-    for index, result in enumerate(results, start=1):
-        print(
-            f"\n[Retrieved {index}] "
-            f"{result.get('source')} "
-            f"(page {result.get('page')}, "
-            f"score={result.get('score', 0):.4f})"
-        )
-        print(result.get("text", ""))
+    # for logs
+    # for index, result in enumerate(results, start=1):
+    #     print(
+    #         f"\n[Retrieved {index}] "
+    #         f"{result.get('source')} "
+    #         f"(page {result.get('page')}, "
+    #         f"score={result.get('score', 0):.4f})"
+    #     )
+    #     print(result.get("text", ""))
 
 
     if not results:

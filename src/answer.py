@@ -82,12 +82,12 @@ Answer:
             ],
             options={
                 "temperature": 0,
-                "num_predict": 250 # token limit
+                # "num_predict": 250 # token limit
             },
-            think=False, # stop think, if enable need increase/drop limit num_predict
+            think=True, # stop think, if enable need increase/drop limit num_predict
         )
 
-        print(response)
+        # print(response)
         print("Prompt eval:", response.get("prompt_eval_duration", 0) / 1e9, "s")
         print("Generation eval:", response.get("eval_duration", 0) / 1e9, "s")
         print("Generated tokens:", response.get("eval_count", 0))
